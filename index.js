@@ -1,4 +1,4 @@
- // ให้สร้างไฟล์ auth.json แล้วใส่ token /
+ // ให้สร้างไฟล์ auth.json แล้วใส่ token //
  const Discord = require('discord.js');
  const auth = require('./auth.json');
  const client = new Discord.Client({ intents: ['GUILDS', 'GUILD_MESSAGES'] });
@@ -39,6 +39,13 @@
          girl = ['สวยมาก', 'สวย', 'ไม่สวย', 'ไม่รู้สิ']
          if (msg.content == 'หิวจัง') {
              msg.reply(foods[random_num()])
+
+             if (msg.content == 'เราหล่อไหม')
+                 msg.reply(boy[random_num()])
+
+             if (msg.content == 'เราสวยไหม')
+                 msg.reply(girl[random_num()])
+
          }
      })
      //ใช้งาน token//
