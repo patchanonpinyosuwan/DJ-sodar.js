@@ -1,4 +1,4 @@
- // ให้สร้างไฟล์ auth.json แล้วใส่ token //
+ // ให้สร้างไฟล์ auth.json แล้วใส่ token /
  const Discord = require('discord.js');
  const auth = require('./auth.json');
  const client = new Discord.Client({ intents: ['GUILDS', 'GUILD_MESSAGES'] });
