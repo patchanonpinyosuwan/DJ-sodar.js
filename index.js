@@ -1,0 +1,44 @@
+const Discord = require('discord.js');
+const auth = require('./auth.json');
+const client = new Discord.Client({ intents: ['GUILDS', 'GUILD_MESSAGES'] });
+const random_num = () => {
+        return Math.floor(Math.random() * 10);
+    }
+    //คำสั่งพร้อมตอบ//
+client.on('message', (msg) => {
+    if (msg.content === '!hello') {
+        msg.reply('สวัสดีค่ะ');
+    }
+
+    if (msg.content === '!bye') {
+        msg.reply('บาย');
+    }
+
+    if (msg.content === 'หิว') {
+        msg.reply('หาไรกินสิ');
+    }
+
+    if (msg.content === 'รักนะดีเจ') {
+        msg.reply('รักเหมือนกัน^_^');
+    }
+
+    if (msg.content === 'หิวไหมดีเจ') {
+        msg.reply('ไม่อ่ะ OwO');
+    }
+
+    if (msg.content === 'ดีเจ') {
+        msg.reply('ว่าไงวัยรุ่น');
+    }
+
+});
+//สุ้มประโยค//
+client.on('messageCreate', msg => {
+        let foods = ['ข้าวผัด', 'ไก่ทอด', 'ขาหมู', 'ผัดไทย', 'ไข่เจียว', 'ขนม', 'ข้าวต้ม', 'กุ้งดองน้ำปลา', 'ผัดกระเพรา', 'ไม่ต้องกิน']
+        boy = ['หล่อมาก', 'หล่อ', 'ไม่หล่อ', 'ไม่รู้สิ']
+        girl = ['สวยมาก', 'สวย', 'ไม่สวย', 'ไม่รู้สิ']
+        if (msg.content == 'หิวจัง') {
+            msg.reply(foods[random_num()])
+        }
+    })
+    //ใช้งาน token//
+client.login(auth.token);
