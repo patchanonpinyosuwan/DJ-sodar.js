@@ -51,5 +51,5 @@
 
 
  });
- //ใช้งาน token//
+ //ใช้งาน token ผ่าน auth//
  client.login(auth.token);
