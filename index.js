@@ -48,8 +48,10 @@
      if (msg.content == 'เราสวยไหม') {
          msg.reply(girl[random_num()]);
      }
+ })
 
 
- });
- //ใช้งาน token ผ่าน auth//
+ //เปิดเพลง//
+ client.on('')
+     //ใช้งาน token ผ่าน auth//
  client.login(auth.token);
